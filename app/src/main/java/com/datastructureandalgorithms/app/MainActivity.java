@@ -17,4 +17,8 @@ public class MainActivity extends AppCompatActivity {
     public void toLink(View view) {
         startActivity(new Intent(this, LinkPracticeActivity.class));
     }
+
+    public void toCommon(View view) {
+        startActivity(new Intent(this, CommonPracticeActivity.class));
+    }
 }

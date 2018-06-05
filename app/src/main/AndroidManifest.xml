@@ -17,5 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".link.LinkPracticeActivity"/>
+        <activity android:name=".CommonPracticeActivity"/>
     </application>
 </manifest>

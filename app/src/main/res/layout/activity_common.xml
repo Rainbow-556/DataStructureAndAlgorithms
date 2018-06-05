@@ -11,14 +11,9 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
         <Button
+            android:id="@+id/btn_hanoi"
             android:layout_width="200dp"
             android:layout_height="45dp"
-            android:onClick="toLink"
-            android:text="链表"/>
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="45dp"
-            android:onClick="toCommon"
-            android:text="常见算法问题"/>
+            android:text="汉诺塔问题"/>
     </LinearLayout>
 </ScrollView>
