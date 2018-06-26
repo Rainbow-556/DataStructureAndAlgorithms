@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.datastructureandalgorithms.app.link.LinkPracticeActivity;
+import com.datastructureandalgorithms.app.tree.TreePracticeActivity;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -20,5 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void toCommon(View view) {
         startActivity(new Intent(this, CommonPracticeActivity.class));
+    }
+
+    public void toTree(View view) {
+        startActivity(new Intent(this, TreePracticeActivity.class));
     }
 }
