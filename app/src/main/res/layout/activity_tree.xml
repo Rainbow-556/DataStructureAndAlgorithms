@@ -13,5 +13,20 @@
             android:layout_width="200dp"
             android:layout_height="45dp"
             android:text="二叉树广度遍历"/>
+        <Button
+            android:id="@+id/btn_pre_order_traversal"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:text="二叉树先序遍历(非递归)"/>
+        <Button
+            android:id="@+id/btn_middle_order_traversal"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:text="二叉树中序遍历(非递归)"/>
+        <Button
+            android:id="@+id/btn_last_order_traversal"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:text="二叉树后序遍历(非递归)"/>
     </LinearLayout>
 </ScrollView>
