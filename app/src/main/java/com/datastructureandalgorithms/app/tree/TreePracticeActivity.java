@@ -15,30 +15,51 @@ import java.util.Stack;
  * Created by lixiang on 2018/6/26.<br/>
  */
 public final class TreePracticeActivity extends AppCompatActivity implements View.OnClickListener {
+    private TreeNode rootNode;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tree);
+        TreeNode left = new TreeNode(20, new TreeNode(15, null, null), null);
+        TreeNode right = new TreeNode(40, new TreeNode(35, null, null), null);
+        rootNode = new TreeNode(30, left, right);
         findViewById(R.id.btn_level_order_traversal).setOnClickListener(this);
         findViewById(R.id.btn_pre_order_traversal).setOnClickListener(this);
         findViewById(R.id.btn_middle_order_traversal).setOnClickListener(this);
         findViewById(R.id.btn_last_order_traversal).setOnClickListener(this);
+        findViewById(R.id.btn_search_binary_search_tree).setOnClickListener(this);
+        findViewById(R.id.btn_insert_binary_search_tree).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_level_order_traversal:
-                levelOrderTraversal(null);
+                levelOrderTraversal(rootNode);
                 break;
             case R.id.btn_pre_order_traversal:
-                preOrderTraversal(null);
+                preOrderTraversal(rootNode);
                 break;
             case R.id.btn_middle_order_traversal:
-                middleOrderTraversal(null);
+                middleOrderTraversal(rootNode);
                 break;
             case R.id.btn_last_order_traversal:
-                lastOrderTraversal(null);
+                lastOrderTraversal(rootNode);
+                break;
+            case R.id.btn_search_binary_search_tree:
+                int data = 19;
+                TreeNode result = searchBinarySearchTree(rootNode, data);
+                FLogger.msg(result != null ? "找到节点" + result.data : "节点" + data + "不存在");
+                break;
+            case R.id.btn_insert_binary_search_tree:
+                FLogger.msg("pre");
+                middleOrderTraversal(rootNode);
+                for (int i = 15; i < 25; i++) {
+                    insertBinarySearchTree(rootNode, i);
+                }
+                FLogger.msg("after");
+                middleOrderTraversal(rootNode);
                 break;
         }
     }
@@ -137,6 +158,62 @@ public final class TreePracticeActivity extends AppCompatActivity implements Vie
                 } else {
                     node = peek.rightChild;
                 }
+            }
+        }
+    }
+
+    /**
+     * 二叉查找树的递归查找某个节点
+     * @param node
+     * @param data
+     * @return
+     */
+    private TreeNode searchBinarySearchTree(TreeNode node, int data) {
+        if (node == null) {
+            return null;
+        }
+        if (node.data == data) {
+            return node;
+        }
+        if (data > node.data) {
+            // data比当前节点的数据域大，递归查找其右子树，否则递归查找其左子树
+            return searchBinarySearchTree(node.rightChild, data);
+        } else {
+            return searchBinarySearchTree(node.leftChild, data);
+        }
+    }
+
+    /**
+     * 二叉查找树-插入
+     * @param node
+     * @param data
+     * @return 新插入的节点
+     */
+    private TreeNode insertBinarySearchTree(TreeNode node, int data) {
+        if (node == null) {
+            // node为null表示当前为空树
+            node = new TreeNode(data, null, null);
+            return node;
+        }
+        if (node.data == data) {
+            // 数据域相等，表示已存在
+            return node;
+        }
+        if (data > node.data) {
+            if (node.rightChild == null) {
+                // 节点的有孩子为空，表示可以直接插入到该节点中，作为它的右孩子
+                node.rightChild = new TreeNode(data, null, null);
+                return node.rightChild;
+            } else {
+                // 此时问题转化为往当前节点的右子树中插入
+                return insertBinarySearchTree(node.rightChild, data);
+            }
+        } else {
+            if (node.leftChild == null) {
+                node.leftChild = new TreeNode(data, null, null);
+                return node.leftChild;
+            } else {
+                return insertBinarySearchTree(node.leftChild, data);
             }
         }
     }

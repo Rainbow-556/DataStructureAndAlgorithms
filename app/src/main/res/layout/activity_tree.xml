@@ -28,5 +28,15 @@
             android:layout_width="200dp"
             android:layout_height="45dp"
             android:text="二叉树后序遍历(非递归)"/>
+        <Button
+            android:id="@+id/btn_search_binary_search_tree"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:text="二叉查找树-查找元素"/>
+        <Button
+            android:id="@+id/btn_insert_binary_search_tree"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:text="二叉查找树-插入"/>
     </LinearLayout>
 </ScrollView>
