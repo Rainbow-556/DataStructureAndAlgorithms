@@ -19,5 +19,6 @@
         <activity android:name=".link.LinkPracticeActivity"/>
         <activity android:name=".CommonPracticeActivity"/>
         <activity android:name=".tree.TreePracticeActivity"/>
+        <activity android:name=".SortPracticeActivity"/>
     </application>
 </manifest>

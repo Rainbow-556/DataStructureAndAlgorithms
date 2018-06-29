@@ -26,4 +26,8 @@ public class MainActivity extends AppCompatActivity {
     public void toTree(View view) {
         startActivity(new Intent(this, TreePracticeActivity.class));
     }
+
+    public void toSort(View view) {
+        startActivity(new Intent(this, SortPracticeActivity.class));
+    }
 }
