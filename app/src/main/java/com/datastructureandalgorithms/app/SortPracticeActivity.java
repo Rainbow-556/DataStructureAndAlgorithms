@@ -18,6 +18,7 @@ public final class SortPracticeActivity extends AppCompatActivity implements Vie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sort);
         findViewById(R.id.btn_quick_sort).setOnClickListener(this);
+        findViewById(R.id.btn_bubble_sort).setOnClickListener(this);
     }
 
     @Override
@@ -29,28 +30,32 @@ public final class SortPracticeActivity extends AppCompatActivity implements Vie
                 quickSort(arr, 0, arr.length - 1);
                 printArr("after", arr);
                 break;
+            case R.id.btn_bubble_sort:
+                printArr("pre", arr);
+                bubbleSort(arr);
+                printArr("after", arr);
+                break;
         }
     }
 
     /**
      * 快排思想：在待排序的数组中选头或者尾部的元素作为基数(以下选择头部第一个元素)，定义两个变量i，j。
-     * i从end开始也就是从右向左扫描，如果遇到比基数小的则直接与j进行交换，然后执行j的从左向右扫描
-     * j从begin开始从左往右扫描，如果遇到比基数大的直接与i进行交换，然后执行i的从右到左扫描
+     * j从end开始从右往左扫描，如果遇到比基数小的直接与i进行交换，然后执行i的从左到右扫描
+     * i从start开始也就是从左向右扫描，如果遇到比基数大的则直接与j进行交换
      * 以上两个步骤循环，直到i和j相遇时，此时i和j的位置标识为k，则k左边的数都比k小，k右边的数都比k大，然后对左右两部分的数据分别进行快排，
      * 如果发现某一个部分只有一个元素时，则不需要排，否则对这部分的数进行快排
-     *
      * @param arr
-     * @param begin
+     * @param start
      * @param end
      */
-    private void quickSort(int[] arr, int begin, int end) {
+    private void quickSort(int[] arr, int start, int end) {
         // 当某个部分只剩下一个或者没有元素时，则该部分不需要排序
-        if (begin >= end) {
+        if (start >= end) {
             return;
         }
-        int i = begin, j = end;
+        int i = start, j = end;
         // 基数
-        int base = arr[begin];
+        int base = arr[start];
         // 知道i和j相遇才跳出循环
         while (i < j) {
             // 从j处开始从右往左扫描，直到某个位置的元素比base小，则把该位置上的元素赋值给角标为i的元素
@@ -76,8 +81,19 @@ public final class SortPracticeActivity extends AppCompatActivity implements Vie
         arr[i] = base;
         // 执行到这里，表示角标i左边的元素都比base小，而角标i右边的元素都比i大，从而把一个无序数组分离成了两个部分
         // 然后对这两个部分分别再进行快速排序
-        quickSort(arr, begin, i - 1);
+        quickSort(arr, start, i - 1);
         quickSort(arr, i + 1, end);
+    }
+
+    private void bubbleSort(int[] arr) {
+        int len = arr.length;
+        for (int i = len - 1; i >= 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    swap(arr, j, j + 1);
+                }
+            }
+        }
     }
 
     private void swap(int[] arr, int m, int n) {

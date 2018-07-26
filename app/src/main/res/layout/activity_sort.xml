@@ -15,5 +15,10 @@
             android:layout_width="200dp"
             android:layout_height="45dp"
             android:text="快速排序"/>
+        <Button
+            android:id="@+id/btn_bubble_sort"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:text="冒泡排序"/>
     </LinearLayout>
 </ScrollView>
