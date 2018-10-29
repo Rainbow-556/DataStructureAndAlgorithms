@@ -8,6 +8,8 @@ package com.datastructureandalgorithms.app.forofferbook;
  * 思路：由于这个二维数组的元素排列特性，直接取右上角的元素num和target比较，如果num和target相等，则直接返回；
  * 如果num比target大，则说明该位置下面的元素全都比target大，所以排除该列；如果num比target小，则说明该位置所在行的之前的所有
  * 元素都比target小，所以排除该行，依次去排除
+ * <p>
+ * 测试数据：int[][] arr = {{1, 2, 3}, {2, 3, 4}, {5, 6, 10}};
  */
 public final class ForOffer_1 {
     public static boolean searchNumber(int[][] arr, int target) {

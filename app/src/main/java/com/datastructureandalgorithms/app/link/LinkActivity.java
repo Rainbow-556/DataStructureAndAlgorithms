@@ -23,9 +23,9 @@ public class LinkActivity extends AppCompatActivity implements View.OnClickListe
      * 反转链表
      */
     private void reverseLink() {
-        LinkNode head = createLink();
+        LinkNode head = LinkNode.createLink(5);
         FLogger.msg("before");
-        printLink(head);
+        LinkNode.printLink(head);
         // 前一个
         LinkNode pre = head;
         // 当前
@@ -43,26 +43,7 @@ public class LinkActivity extends AppCompatActivity implements View.OnClickListe
         // 新的head
         head = pre;
         FLogger.msg("after");
-        printLink(head);
-    }
-
-    private void printLink(LinkNode head) {
-        LinkNode cur = head;
-        while (cur != null) {
-            FLogger.msg(cur);
-            cur = cur.next;
-        }
-    }
-
-    private LinkNode createLink() {
-        LinkNode pre = new LinkNode("0", null);
-        LinkNode head = pre;
-        for (int i = 1; i < 5; i++) {
-            LinkNode node = new LinkNode(String.valueOf(i), null);
-            pre.next = node;
-            pre = node;
-        }
-        return head;
+        LinkNode.printLink(head);
     }
 
     @Override
