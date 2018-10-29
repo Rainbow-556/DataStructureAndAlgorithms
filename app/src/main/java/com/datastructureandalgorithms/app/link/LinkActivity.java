@@ -11,7 +11,7 @@ import com.datastructureandalgorithms.app.util.FLogger;
 /**
  * Created by lixiang on 2018/5/30.
  */
-public class LinkPracticeActivity extends AppCompatActivity implements View.OnClickListener {
+public class LinkActivity extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

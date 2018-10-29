@@ -10,7 +10,7 @@ import com.datastructureandalgorithms.app.util.FLogger;
 /**
  * Created by lixiang on 2018/6/5.<br/>
  */
-public final class CommonPracticeActivity extends AppCompatActivity implements View.OnClickListener {
+public final class CommonActivity extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

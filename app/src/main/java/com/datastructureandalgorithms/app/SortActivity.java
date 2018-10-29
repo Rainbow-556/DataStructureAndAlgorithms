@@ -12,7 +12,7 @@ import java.util.Random;
 /**
  * Created by lixiang on 2018/6/29.<br/>
  */
-public final class SortPracticeActivity extends AppCompatActivity implements View.OnClickListener {
+public final class SortActivity extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

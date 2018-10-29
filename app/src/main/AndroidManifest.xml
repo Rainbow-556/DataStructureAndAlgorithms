@@ -16,9 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".link.LinkPracticeActivity"/>
-        <activity android:name=".CommonPracticeActivity"/>
-        <activity android:name=".tree.TreePracticeActivity"/>
-        <activity android:name=".SortPracticeActivity"/>
+        <activity android:name=".link.LinkActivity"/>
+        <activity android:name=".CommonActivity"/>
+        <activity android:name=".tree.TreeActivity"/>
+        <activity android:name=".SortActivity"/>
     </application>
 </manifest>

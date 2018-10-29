@@ -14,7 +14,7 @@ import java.util.Stack;
 /**
  * Created by lixiang on 2018/6/26.<br/>
  */
-public final class TreePracticeActivity extends AppCompatActivity implements View.OnClickListener {
+public final class TreeActivity extends AppCompatActivity implements View.OnClickListener {
     private TreeNode rootNode;
 
     @Override
@@ -71,16 +71,16 @@ public final class TreePracticeActivity extends AppCompatActivity implements Vie
         if (root == null) {
             return;
         }
-        ArrayDeque<TreeNode> queue = new ArrayDeque<>();
-        queue.add(root);
-        while (!queue.isEmpty()) {
-            TreeNode node = queue.remove();
+        ArrayDeque<TreeNode> deque = new ArrayDeque<>();
+        deque.add(root);
+        while (!deque.isEmpty()) {
+            TreeNode node = deque.removeFirst();
             FLogger.msg(node.data);
             if (node.leftChild != null) {
-                queue.add(node.leftChild);
+                deque.add(node.leftChild);
             }
             if (node.rightChild != null) {
-                queue.add(node.rightChild);
+                deque.add(node.rightChild);
             }
         }
     }

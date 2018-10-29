@@ -5,8 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.datastructureandalgorithms.app.link.LinkPracticeActivity;
-import com.datastructureandalgorithms.app.tree.TreePracticeActivity;
+import com.datastructureandalgorithms.app.link.LinkActivity;
+import com.datastructureandalgorithms.app.tree.TreeActivity;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -16,18 +16,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toLink(View view) {
-        startActivity(new Intent(this, LinkPracticeActivity.class));
+        startActivity(new Intent(this, LinkActivity.class));
     }
 
     public void toCommon(View view) {
-        startActivity(new Intent(this, CommonPracticeActivity.class));
+        startActivity(new Intent(this, CommonActivity.class));
     }
 
     public void toTree(View view) {
-        startActivity(new Intent(this, TreePracticeActivity.class));
+        startActivity(new Intent(this, TreeActivity.class));
     }
 
     public void toSort(View view) {
-        startActivity(new Intent(this, SortPracticeActivity.class));
+        startActivity(new Intent(this, SortActivity.class));
     }
 }
