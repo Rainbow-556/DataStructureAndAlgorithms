@@ -30,5 +30,10 @@
             android:layout_height="45dp"
             android:onClick="toCommon"
             android:text="常见算法问题"/>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:onClick="toForOffer"
+            android:text="剑指Offer"/>
     </LinearLayout>
 </ScrollView>

@@ -20,5 +20,6 @@
         <activity android:name=".CommonActivity"/>
         <activity android:name=".tree.TreeActivity"/>
         <activity android:name=".SortActivity"/>
+        <activity android:name=".forofferbook.ForOfferActivity"/>
     </application>
 </manifest>
