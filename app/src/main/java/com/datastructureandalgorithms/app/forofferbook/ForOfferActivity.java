@@ -26,6 +26,6 @@ public final class ForOfferActivity extends AppCompatActivity implements View.On
     }
 
     private void run() {
-        ForOffer_5.twoStackImplQueue();
+        ForOffer_6.findMin();
     }
 }
