@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.datastructureandalgorithms.app.R;
-import com.datastructureandalgorithms.app.util.FLogger;
 
 /**
  * Created by lixiang on 2018/10/29.<br/>
@@ -27,7 +26,6 @@ public final class ForOfferActivity extends AppCompatActivity implements View.On
     }
 
     private void run() {
-        long fibonacci = ForOffer_7.fibonacci_2(3);
-        FLogger.msg(fibonacci);
+        ForOffer_8.numberOfOne(2);
     }
 }
