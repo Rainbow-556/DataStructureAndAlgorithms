@@ -26,6 +26,6 @@ public final class ForOfferActivity extends AppCompatActivity implements View.On
     }
 
     private void run() {
-        ForOffer_8.numberOfOne(2);
+        ForOffer_11.reorder();
     }
 }
