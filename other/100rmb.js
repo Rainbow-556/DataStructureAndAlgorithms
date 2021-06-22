@@ -11,6 +11,6 @@ function rmb100() {
       }
     }
   }
-  console.log('basic total count=' + count)
+  console.log('total count=' + count)
 }
 rmb100()
