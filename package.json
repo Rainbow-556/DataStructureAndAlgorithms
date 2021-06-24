@@ -1,0 +1,20 @@
+{
+  "name": "datastructureandalgorithms",
+  "version": "1.0.0",
+  "description": "数据结构与算法练习",
+  "main": "",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rainbow-556/DataStructureAndAlgorithms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rainbow-556/DataStructureAndAlgorithms/issues"
+  },
+  "homepage": "https://github.com/Rainbow-556/DataStructureAndAlgorithms#readme"
+}
